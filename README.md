@@ -1,7 +1,13 @@
-# mongosh-container-arm
-Docker container with Mongosh for ARM
-https://dev.to/bobstrange/install-mongodb-to-arm64-amazon-linux-2-lon
-https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/
+# Mongo docker image for ARM
 
-https://pimylifeup.com/mongodb-raspberry-pi/
-need to run systemctl
+This docker image has been made after problems with the fact of running arm64v8 Mongo docker image on Raspberry 3 with ubuntu server 22.04 64bit. So if you have a similar problem I hope I have resolved your problem ;)
+
+## Build
+
+Firstly download the dockerfile and one time this done do this commad:
+
+```sh
+sudo docker build -t <name> .
+```
+
+In case of problems open a PR.
