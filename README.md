@@ -10,4 +10,29 @@ Firstly download the dockerfile and one time this is done do this command:
 sudo docker build -t <name> .
 ```
 
+## Problem with restart and config reload?
+
+If you have problems with:
+
+```sh
+systemctl restart mongod
+```
+
+And your Mongodb config doesn't reload do this:
+
+```sh
+# Search for mongo db run service command 
+ps -ax | grep '/usr/bin/mongod --config /etc/mongod.conf'
+# kill this / those processes with the pid num
+kill <pid_num>
+```
+
+After stopping the mongod processes reload it:
+
+```sh
+systemctl start mongod
+```
+
+## Problems
+
 In case of problems open a PR.
